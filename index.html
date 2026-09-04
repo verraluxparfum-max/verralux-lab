@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Verralux Lab Journal</title>
+
+<!-- Web App & Theme Settings -->
+<meta name="theme-color" content="#1A1410">
+<meta name="background-color" content="#F5F1E8">
+
+<!-- Android & PWA Standalone Mode Meta Tags -->
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="application-name" content="Verralux Lab">
+
+<!-- iOS Safari Standalone Mode Meta Tags -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Verralux Lab">
+
+<!-- Prevent unwanted automatic phone number linking -->
+<meta name="format-detection" content="telephone=no">
+
+<!-- App Manifest & Icons -->
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+
+<!-- Main Stylesheet -->
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app-root">
+  <!-- Topbar Header -->
+  <header class="topbar" id="topbar">
+    <button class="topbar-back" id="btn-back" aria-label="Back">←</button>
+    <div class="topbar-title">
+      <div class="topbar-brand">Verralux</div>
+      <h1 id="view-title">Library</h1>
+    </div>
+    <button class="topbar-menu" id="btn-menu" aria-label="Menu">⋮</button>
+  </header>
+
+  <!-- Viewport Content Area -->
+  <main class="view-container" id="view-container">
+    <div id="view" class="view"></div>
+  </main>
+
+  <!-- Bottom Navigation Bar -->
+  <nav class="bottom-nav" id="bottom-nav">
+    <button class="tab-btn active" data-route="library">
+      <span class="tab-icon">📖</span>
+      <span class="tab-label">Library</span>
+    </button>
+    <button class="tab-btn" data-route="rd">
+      <span class="tab-icon">🧪</span>
+      <span class="tab-label">R&amp;D</span>
+    </button>
+    <button class="tab-btn" data-route="journal">
+      <span class="tab-icon">📔</span>
+      <span class="tab-label">Journal</span>
+    </button>
+    <button class="tab-btn" data-route="reports">
+      <span class="tab-icon">📊</span>
+      <span class="tab-label">Reports</span>
+    </button>
+    <button class="tab-btn" data-route="settings">
+      <span class="tab-icon">⚙</span>
+      <span class="tab-label">Settings</span>
+    </button>
+  </nav>
+</div>
+
+<!-- Modal & Toast Host Overlays -->
+<div id="toast-host"></div>
+<div id="confirm-host"></div>
+<div id="menu-host"></div>
+
+<!-- Core Infrastructure -->
+<script src="js/db.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/seed-ingredients.js"></script>
+<script src="js/seed-ifra.js"></script>
+<script src="js/ui.js"></script>
+
+<!-- Module 1: Library -->
+<script src="js/library-ingredients.js"></script>
+<script src="js/library-accords.js"></script>
+<script src="js/library-references.js"></script>
+<script src="js/library.js"></script>
+
+<!-- Module 2: R&D Workbench -->
+<script src="js/rd-ingredient-studies.js"></script>
+<script src="js/rd-accord-development.js"></script>
+<script src="js/rd-clone-trials.js"></script>
+<script src="js/rd-original-composition.js"></script>
+<script src="js/rd-formula-lock.js"></script>
+<script src="js/rd.js"></script>
+
+<!-- Module 3: Production Journal -->
+<script src="js/journal-active.js"></script>
+<script src="js/journal-maceration.js"></script>
+<script src="js/journal-qc.js"></script>
+<script src="js/journal-release.js"></script>
+<script src="js/journal.js"></script>
+
+<!-- Module 4 & 5: Reports, Settings & App Router -->
+<script src="js/reports.js"></script>
+<script src="js/settings.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
